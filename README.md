@@ -1,5 +1,7 @@
 # Hello
 
+
+flask_first.py
 ```
 from flask import Flask
 from utils import farm
@@ -13,4 +15,13 @@ def index():
 
 
 app.run(debug=True, port=5003)
+```
+
+utils.py
+```
+def farm():
+    wr = open("requirements.txt")
+    file = [i for i in wr]
+    st = '<br>'.join(file)
+    return st
 ```
